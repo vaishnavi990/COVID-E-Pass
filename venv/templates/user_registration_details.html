@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title> COVID E-pass</title>
+        <style>
+            h2{
+                color:black;
+                text-align: center;
+            }
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+              font-size: 15px;
+            }
+            td, th {
+              border: 1px solid ;
+              text-align: center;
+              padding: 8px;
+            }
+            tr:nth-child(even) {
+              background-color: #f1f1f1;
+              color:midnightblue;
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <h2> E-Ticket Status</h2>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Aadhar Number</th>
+                    <th>Travelling Form</th>
+                    <th>Travelling To</th>
+                    <th>Phone Number</th>
+                    <th>Date Of Travel</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <th>{{var}}</th>
+                    <th>{{var1}}</th>
+                    <th>{{var2}}</th>
+                    <th>{{var3}}</th>
+                    <th>{{var5}}</th>
+                    <th>{{var7}}</th>
+                    <th>{{var8}}</th>
+                    <th>{{var9}}</th>
+                </tr>
+            </table>
+        </div>
+        </body>
+</html>
+
+
+
+            <!-- Name: {{var}}
+            Email Id: {{var1}}
+            Aadhar Number: {{var2}}
+            Travelling Form: {{var3}}
+            Travelling To: {{var4}}
+            Phone Number: {{var5}}
+            Date Of Travel: {{var6}}
+            Status: {{var9}} -->
