@@ -9,7 +9,7 @@ auth_token = '89e76cc2d0fcfde1d537b156cca823ff'
 client = Client(account_sid,auth_token)
 app = Flask(__name__,static_url_path='/static')
 @app.route('/',methods=['GET','POST'])
-def login():
+def index():
     if request.method == 'POST':
         fname = request.form['fname']
         lname = request.form['lname']
@@ -29,15 +29,15 @@ def login():
         travel_pass = ((cnt/pop)*100)
         if travel_pass < 30 and request.method =='POST':
             status = 'CONFIRMED'
-            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+917093461497',
+            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
                                   body="Hello "+" "+full_name+" "+'Your Travel From'+" "+source_dt+" "+"To"+" "+destination_dt+" "+
-                                  "Has"+" "+status+"On"+" "+date+" ")
+                                  "Has"+" "+status+" "+"On"+" "+date+" ")
             return render_template('user_registration_details.html',var=full_name,var1=email_id,var2=id_proof,
                                    var3=source_st,var4=source_dt,var5=destination_st,var6=destination_dt,
                                    var7=phoneNumber,var8=date,var9=status)
         else:
             status = 'NOT CONFIRMED'
-            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+917093461497',
+            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
                                   body="Hello" + " " + full_name + " " + 'Your Travel From' + " " + source_dt + " " + "To" + " " + destination_dt + " " +
                                        "Has" + " " + status +"  "+"On" + " " + date + " "+", Apply later")
             return render_template('user_registration_details.html', var=full_name, var1=email_id, var2=id_proof,
