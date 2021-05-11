@@ -1,75 +1,113 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
     <head>
-        <title>COVID E-Ticket</title>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <!--jQuery library -->
-<!--            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+        <title>COVID E-ticket</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-            <!-- Popper JS -->
-<!--            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            <!-- Latest compiled JavaScript -->
-<!--            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></head>-->
-<!--            <link rel="stylesheet" type="text/css" href="/style.css">-->
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style type="text/css">
+        body{
+            background-image: url(https://img.onmanorama.com/content/dam/mm/en/travel/travel-news/images/2021/1/21/flight-covid-safety.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family:sans-serif;
+            font-weight: bold;
+        }
+        .navbar-container{
+            margin: 10px 5px;
+            font-size: x-large;
+        }
+        img{
+            margin-right: 15px;
+            border-radius: 30px;
+        }
+        #ui,nav{
+                background-color: #e3f2fd;
+                padding: 10px 15px 10px 15px;
+                margin-top: 0px;
+                border-radius: 10px;
+                opacity: 0.8;
+            }
+            #ui label{
+                color: #000000;
+                font-size: medium;
+                font-weight: 700;
+            }
+        </style>
     </head>
-
     <body>
-
-        <div id="login">
-            <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
-                            <form id="login-form" class="form" action="/" method="post">
-                                <h3 class="text-center  text-info">Registeration Form</h3>
-                                <div class="form-group">
-                                    <label for="fname" class="text-info">First Name:</label><br>
-                                    <input type="text" name="fname" id="fname" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lname" class="text-info">Last Name:</label><br>
-                                    <input type="text" name="lname" id="lname" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="text-info">Email: </label><br>
-                                    <input type="email" name="email" id="email" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="source_state" class="text-info">Source State: </label><br>
-                                    <input type="text" name="source_state" id="source_state" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="source" class="text-info">Source: </label><br>
-                                    <input type="text" name="source" id="source" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="dest_state" class="text-info">Destination State: </label><br>
-                                    <input type="text" name="dest_state" id="dest_state" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="destination" class="text-info">Destination: </label><br>
-                                    <input type="text" name="destination" id="destination" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="p_no" class="text-info">Phone Number: </label><br>
-                                    <input type="text" name="phoneNumber" id="p_no" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="idcard" class="text-info">ID Card: </label><br>
-                                    <input type="text" name="idcard" id="idcard" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date" class="text-info">Date: </label><br>
-                                    <input type="date" name="trip" id="date" class="form-control">
-                                <div class="form-group">
-                                    <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                                </div>
-                                </div>
-                            </form>
+        <nav class="navbar fixed-top navbar-light">
+            <div class="navbar-container">
+            <img src="https://images.all-free-download.com/images/graphiclarge/blue_airplane_icon_vector_280732.jpg" width="50" height="50" class="d-inline-block align-top">
+            COVID E-Ticket
+            </div>
+          </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="ui">
+                                    <form id="login-form" class="form" action="/" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="fname" class="text-info">First Name:</label>
+                                                <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your firstname">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lname" class="text-info">Last Name:</label>
+                                                <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter your lastname">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <label for="email" class="text-info">Email:</label>
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="source_state" class="text-info">Source State:</label>
+                                                <input type="text" name="source_state" id="source_state" class="form-control" placeholder="Enter source state">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="source" class="text-info">Source:</label>
+                                                <input type="text" name="source" id="source" class="form-control" placeholder="Enter district">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="dest_state" class="text-info">Destination State:</label>
+                                                <input type="text" name="dest_state" id="dest_state" class="form-control" placeholder="Enter destination state">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="destination" class="text-info">Destination:</label>
+                                                <input type="text" name="destination" id="destination" class="form-control" placeholder="Enter destination district">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="p_no" class="text-info">Phone Number:</label>
+                                                <input type="text" name="phoneNumber" id="p_no" class="form-control" placeholder="Enter phone number">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="idcard" class="text-info">Aadhar Number:</label><br>
+                                                <input type="text" name="idcard" id="idcard" class="form-control" placeholder="Enter aadhar number">
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <label for="date" class="text-info">Date:</label>
+                                                <input type="date" name="trip" id="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <input type="submit" name="submit" class="btn btn-primary btn-block btn-md">
+                                    </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
     </body>

@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title> COVID E-pass</title>
-        <style>
-            h2{
-                color:black;
-                text-align: center;
+        <title>COVID E-ticket</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style type="text/css">
+        body{
+            background-image: url(https://img.onmanorama.com/content/dam/mm/en/travel/travel-news/images/2021/1/21/flight-covid-safety.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family:sans-serif;
+            font-weight: bold;
+            font-size: large;
+        }
+        .navbar-container{
+            margin: 10px 5px;
+            font-size: x-large;
+        }
+        img{
+            margin-right: 15px;
+            border-radius: 30px;
+        }
+        ul{
+            padding-left: 0px;
+        }
+            #ui,nav{
+                background-color: #e3f2fd;
+                padding: 10px 15px 0px 15px;
+                margin-top: 0px;
+                border-radius: 10px;
+                opacity: 0.8;
             }
-            table {
-              font-family: arial, sans-serif;
-              border-collapse: collapse;
-              width: 100%;
-              font-size: 15px;
+            #ui label{
+                color: #000000;
+                font-size: medium;
+                font-weight: 800;
             }
-            td, th {
-              border: 1px solid ;
-              text-align: center;
-              padding: 8px;
-            }
-            tr:nth-child(even) {
-              background-color: #f1f1f1;
-              color:midnightblue;
-            }
-            </style>
+        </style>
     </head>
     <body>
-        <div>
-            <h2> E-Ticket Status</h2>
+        <nav class="navbar fixed-top navbar-light">
+            <div class="navbar-container">
+            <img src="https://images.all-free-download.com/images/graphiclarge/blue_airplane_icon_vector_280732.jpg" width="50" height="50" class="d-inline-block align-top">
+            COVID E-Ticket
+            </div>
+          </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="ui">
+                                    <form class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul style="list-style-type:none">
+                                                <li>Name: {{var}}</li><br>
+                                                <li>Email Id: &nbsp;{var1}}</li><br>
+                                                <li>Aadhar Number: {{var2}}</li><br>
+                                                <li>Travelling From: &nbsp;{{var3}}</li><br>
+                                                <li>District: &nbsp;{{var4}}</li><br>
+                                                <li>Travelling To: &nbsp;{{var5}}</li><br>
+                                                <li>District: &nbsp;{{var6}}</li><br>
+                                                <li>Phone Number: &nbsp;{{var7}}</li><br>
+                                                <li>Date Of Travel: &nbsp;{{var8}}</li><br>
+                                                <li>Status: &nbsp;{{var9}}</li><br>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                    </div>
+                </div>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Email Id</th>
-                    <th>Aadhar Number</th>
-                    <th>Travelling Form</th>
-                    <th>Travelling To</th>
-                    <th>Phone Number</th>
-                    <th>Date Of Travel</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <th>{{var}}</th>
-                    <th>{{var1}}</th>
-                    <th>{{var2}}</th>
-                    <th>{{var3}}</th>
-                    <th>{{var5}}</th>
-                    <th>{{var7}}</th>
-                    <th>{{var8}}</th>
-                    <th>{{var9}}</th>
-                </tr>
-            </table>
-        </div>
-        </body>
+    </body>
 </html>
-
-
-
-            <!-- Name: {{var}}
-            Email Id: {{var1}}
-            Aadhar Number: {{var2}}
-            Travelling Form: {{var3}}
-            Travelling To: {{var4}}
-            Phone Number: {{var5}}
-            Date Of Travel: {{var6}}
-            Status: {{var9}} -->
