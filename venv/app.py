@@ -13,7 +13,7 @@ def index():
     if request.method == 'POST':
         fname = request.form['fname']
         lname = request.form['lname']
-        email_id = request.form['email']
+        email = request.form['email']
         source_st = request.form['source_state']
         source_dt = request.form['source']
         destination_st = request.form['dest_state']
@@ -32,7 +32,7 @@ def index():
             client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
                                   body="Hello "+" "+full_name+" "+'Your Travel From'+" "+source_dt+" "+"To"+" "+destination_dt+" "+
                                   "Has"+" "+status+" "+"On"+" "+date+" ")
-            return render_template('user_registration_details.html',var=full_name,var1=email_id,var2=id_proof,
+            return render_template('user_registration_details.html',var=full_name,var1=email,var2=id_proof,
                                    var3=source_st,var4=source_dt,var5=destination_st,var6=destination_dt,
                                    var7=phoneNumber,var8=date,var9=status)
         else:
@@ -40,7 +40,7 @@ def index():
             client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
                                   body="Hello" + " " + full_name + " " + 'Your Travel From' + " " + source_dt + " " + "To" + " " + destination_dt + " " +
                                        "Has" + " " + status +"  "+"On" + " " + date + " "+", Apply later")
-            return render_template('user_registration_details.html', var=full_name, var1=email_id, var2=id_proof,
+            return render_template('user_registration_details.html', var=full_name, var1=email, var2=id_proof,
                                    var3=source_st, var4=source_dt, var5=destination_st, var6=destination_dt,
                                    var7=phoneNumber, var8=date, var9=status)
     else:
