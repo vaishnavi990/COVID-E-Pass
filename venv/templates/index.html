@@ -2,52 +2,187 @@
 <html>
     <head>
         <title>COVID E-ticket</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script class="press-logo" src="https://kit.fontawesome.com/3ea53c1d6b.js" crossorigin="anonymous"></script>
         <style type="text/css">
         body{
-            background-image: url(https://img.onmanorama.com/content/dam/mm/en/travel/travel-news/images/2021/1/21/flight-covid-safety.jpg);
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            font-family:sans-serif;
-            font-weight: bold;
+            font-family: 'Montserrat',sans-serif;
+            background-color: #1A385A;
+            color: #fff;
         }
-        .navbar-container{
-            margin: 10px 5px;
+        /* Register */
+        #info{
+            margin-left: 10px;
+        }
+        .register-info{
             font-size: x-large;
         }
-        img{
-            margin-right: 15px;
-            border-radius: 30px;
+        .register-button{
+            margin-top:2%;
+            border:none;
         }
-        #ui,nav{
-                background-color: #e3f2fd;
-                padding: 10px 15px 10px 15px;
-                margin-top: 0px;
-                border-radius: 10px;
-                opacity: 0.8;
-            }
-            #ui label{
-                color: #000000;
-                font-size: medium;
-                font-weight: 700;
-            }
+        button{
+            color: #fff;
+            background-color:#1A385A;
+            font-size: 20px;
+            padding:2% 5%;
+            cursor: pointer;
+        }
+        .travel-safe-image{
+            margin:20px 30px;
+            max-width:790px;
+            max-height:230px;
+            overflow: hidden;
+        }
+        /* Title */
+        #title{
+            font-weight:bold;
+            padding: 2% 6% 4%;
+        }
+        .brand-image{
+            color: #fff;
+            padding:5px;
+        }
+        .travel-image{
+            margin: 220px 0px 0px 100px;
+            max-width:390px;
+            max-height: 255px;
+            overflow: hidden;
+        }
+        /* Form */
+        #sign-up-form{
+            padding-bottom: 3%;
+        }
+        .submit{
+            margin-top: 5%;
+        }
+        #ui{
+            padding-top: 50px;
+        }
+        /* About */
+        .about-us{
+            text-align: center;
+            padding:7% 10%;
+        }
+        .check-circle{
+            padding-bottom: 2%;
+        }
+        /* Safety */
+        #Safety{
+            padding: 7% 10%;
+        }
+        .card{
+            margin: 2%;
+            text-align: center;
+        }
+        .card-header{
+            background-color:#1A385A;
+        }
+        .card-body{
+            color: #1A385A;
+        }
+        .safety-icon{
+            margin: 15px 80px 25px 15px;
+            color: #1A385A;
+        }
+        /* Contact */
+        #Contact{
+            padding: 7% 10%;
+            text-align: center;
+        }
+        .social-icon{
+            margin:20px 10px;
+        }
+        h3{
+            font-weight: 900;
+        }
         </style>
     </head>
     <body>
-        <nav class="navbar fixed-top navbar-light">
-            <div class="navbar-container">
-            <img src="https://images.all-free-download.com/images/graphiclarge/blue_airplane_icon_vector_280732.jpg" width="50" height="50" class="d-inline-block align-top">
-            COVID E-Ticket
+        <section id="title">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href=""><i class="fas fa-subway brand-image"></i> COVID E-Ticket</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#About"><i class="fas fa-info-circle brand-image"></i> About</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Safety"><i class="fas fa-hand-holding-medical brand-image "></i> Safety</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contact"><i class="fas fa-address-book brand-image"></i> Contact</a>
+                </li>
+              </ul>
             </div>
           </nav>
+        </section>
+        <section id="info">
+            <div class="row">
+            <div class="col-lg-9">
+            <div class="card">
+                <div class="card-header">
+                    Know before you travel.
+                </div>
+                <div class="card-body register-info">
+                    Conditions can change rapidly in a country at any time.<br>
+                    Register to get to know your destination in depth before you travel.<br>
+                    <div class="register-button">
+                        <button class="register-button" onclick="window.location.href='#sign-up-form'">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="travel-safe-image">
+                <img src="data:image/png;base64,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">
+            </div>
+        </div>
+        </section>
+        <section id="Safety">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Safety Guidelines</h4>
+                        </div>
+                        <div class="card-body">
+                            <i class="fas fa-virus-slash safety-icon fa-3x"></i>
+                            <i class="fas fa-pump-medical safety-icon fa-3x"></i>
+                            <i class="fas fa-people-arrows safety-icon fa-3x"></i><br>
+                            Our extensive COVID-19 Health & Safety Guidelines ensure your wellbeing is looked after during your travels.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Customer Information</h4>
+                        </div>
+                        <div class="card-body">
+                            <i class="fas fa-road safety-icon fa-3x"></i>
+                            <i class="fas fa-user-md safety-icon fa-3x"></i>
+                            <i class="fas fa-syringe safety-icon fa-3x"></i><br>
+                            Get travel updates regarding the impact of COVID-19 on your travel plans, like vaccination and tests for travel.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sign-up-form">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -96,19 +231,46 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="idcard" class="text-info">Aadhar Number:</label><br>
-                                                <input type="text" name="idcard" id="idcard" class="form-control" placeholder="Enter aadhar number">
+                                                <input type="text" name="idcard" class="form-control" placeholder="Enter aadhar number">
                                             </div>
                                             <div class="col-lg-6">
                                                 <label for="date" class="text-info">Date:</label>
                                                 <input type="date" name="trip" id="date" class="form-control">
                                             </div>
                                         </div>
-                                        <br>
-                                        <input type="submit" name="submit" class="btn btn-primary btn-block btn-md">
-                                    </form>
-                            </div>
-                        </div>
+                                <br>
+                            <input type="submit" name="submit" class="btn btn-primary btn-block btn-md submit">
+                        </form>
+                    </div>
+                </div>
+                    <div class="travel-image col-lg-6">
+                        <img src="https://image.shutterstock.com/image-photo/travel-after-pandemic-safe-coronavirus-260nw-1745510711.jpg"></img>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="About">
+        <div class="about-us">
+            <span class="check-circle fas fa-check-circle fa-4x"></span>
+            <h4>Travel safe with us</h4>
+            <div class="info">
+                we ensure our trips are safe for everyone. Our health and safety policies follow
+                recommendations from the World Health Organization and the World Travel & Tourism Council’s
+                (WTTC) Safe Travel protocols for tour operators. Before we resume trips in any destination,
+                we undergo number of COVID-19 patients in the destination and ensure all the team has been
+                trained with COVID-19 health and safety training.
             </div>
         </div>
+    </section>
+    <section id="Contact">
+        <div class="contact-us">
+            <h3><i class="far fa-comment-alt brand-image"></i> Help Us Improve</h3>
+            <i class="social-icon fab fa-facebook-f fa-2x"></i>
+            <i class="social-icon fab fa-twitter fa-2x"></i>
+            <i class="social-icon fab fa-instagram fa-2x"></i>
+            <i class="social-icon fas fa-envelope fa-2x"></i>
+            <p>© Copyright 2021 Vaishnavi990</p>
+        </div>
+    </section>
     </body>
 </html>
