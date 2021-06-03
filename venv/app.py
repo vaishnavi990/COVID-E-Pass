@@ -29,7 +29,7 @@ def index():
         travel_pass = ((cnt/pop)*100)
         if travel_pass < 30 and request.method =='POST':
             status = 'CONFIRMED'
-            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
+            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+915463728365',
                                   body="Hello "+" "+full_name+" "+'Your Travel From'+" "+source_dt+" "+"To"+" "+destination_dt+" "+
                                   "Has"+" "+status+" "+"On"+" "+date+" ")
             return render_template('user_registration_details.html',var=full_name,var1=email,var2=id_proof,
@@ -37,7 +37,7 @@ def index():
                                    var7=phoneNumber,var8=date,var9=status)
         else:
             status = 'NOT CONFIRMED'
-            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+919705515409',
+            client.messages.create(from_='whatsapp:+14155238886',to='whatsapp:+915463728365',
                                   body="Hello" + " " + full_name + " " + 'Your Travel From' + " " + source_dt + " " + "To" + " " + destination_dt + " " +
                                        "Has" + " " + status +"  "+"On" + " " + date + " "+", Apply later")
             return render_template('user_registration_details.html', var=full_name, var1=email, var2=id_proof,
