@@ -3,8 +3,8 @@ from flask import Flask, render_template,request
 from twilio.rest import Client
 import requests_cache
 
-account_sid = 'ACc27c2294b891fe9454a3f29e38c8b3dc'
-auth_token = '89e76cc2d0fcfde1d537b156cca823ff'
+account_sid = ''
+auth_token = ''
 
 client = Client(account_sid,auth_token)
 app = Flask(__name__,static_url_path='/static')
